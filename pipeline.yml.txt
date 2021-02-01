@@ -1,0 +1,71 @@
+resources:
+
+  - name: selenium-setup
+
+    type: git
+
+    icon: github
+
+    source:
+
+      uri: https://github.com/krishnansiva07/test.git
+
+jobs:
+
+  - name: 'run'
+
+    public: true
+
+    plan:
+
+      - get: selenium-setup
+
+        trigger: true
+
+      - task: 'install'
+
+        config:
+
+          platform: linux
+
+          image_resource:
+
+            type: docker-image
+
+            source: { repository: markhobson/maven-chrome }
+
+          inputs:
+
+            - name: selenium-setup
+
+          run:
+
+            path: /bin/bash
+
+            args:
+
+              - -c
+
+              - |
+
+                dir
+
+                echo 1
+
+                ls selenium-setup
+
+                cd selenium-setup
+
+                echo hey 2
+
+                ls
+
+                echo hey 3
+
+                mvn install
+
+               
+
+                echo 4
+
+                echo $PWD
