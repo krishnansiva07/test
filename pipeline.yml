@@ -28,5 +28,5 @@ jobs:
        args:
        - -exec
        - |
-          cd maven-examples/maven-unit-test/
+          cd maven-examples/
           mvn clean install
