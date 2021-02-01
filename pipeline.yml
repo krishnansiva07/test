@@ -4,7 +4,7 @@ resources:
   type: git
   source:
     branch: master
-    uri: https://github.com/krishnansiva07/TestAutomation.git
+    uri: https://github.com/krishnansiva07/test.git
 jobs:
 - name: compile-run-unittest
   plan:
