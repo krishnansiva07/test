@@ -1,0 +1,78 @@
+{
+  "uid" : "ffbcf44792d34f39",
+  "name" : "validateLogin",
+  "fullName" : "com.tests.LoginTestScripts.validateLogin",
+  "historyId" : "208d6edb9e1771ce28ad007b8613e223",
+  "time" : {
+    "start" : 1608138125804,
+    "stop" : 1608138136251,
+    "duration" : 10447
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ {
+    "name" : "closeBrowser",
+    "time" : {
+      "start" : 1608138136427,
+      "stop" : 1608138136566,
+      "duration" : 139
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.tests.LoginTestScripts"
+  }, {
+    "name" : "testClass",
+    "value" : "com.tests.LoginTestScripts"
+  }, {
+    "name" : "testMethod",
+    "value" : "validateLogin"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite"
+  }, {
+    "name" : "suite",
+    "value" : "Test"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.tests.LoginTestScripts"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4BN2C29"
+  }, {
+    "name" : "thread",
+    "value" : "3528@DESKTOP-4BN2C29.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ffbcf44792d34f39.json",
+  "parameterValues" : [ ]
+}

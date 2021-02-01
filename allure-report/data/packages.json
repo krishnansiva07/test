@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.tests.LoginTestScripts",
+    "children" : [ {
+      "name" : "validateLogin",
+      "uid" : "ffbcf44792d34f39",
+      "parentUid" : "df0183270bbccf979175f15b2d8e08b6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608138125804,
+        "stop" : 1608138136251,
+        "duration" : 10447
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.tests.LoginTestScripts"
+  } ]
+}

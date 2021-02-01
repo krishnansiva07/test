@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 16 22:32:05 IST 2020","Wed Dec 16 22:32:16 IST 2020","10447","Suite","Test","com.tests.LoginTestScripts","com.tests.LoginTestScripts","validateLogin","validateLogin",""

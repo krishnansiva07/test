@@ -1,0 +1,11 @@
+[ {
+  "uid" : "ffbcf44792d34f39",
+  "name" : "validateLogin",
+  "time" : {
+    "start" : 1608138125804,
+    "stop" : 1608138136251,
+    "duration" : 10447
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-4BN2C29",
+    "children" : [ {
+      "name" : "3528@DESKTOP-4BN2C29.main(1)",
+      "children" : [ {
+        "name" : "validateLogin",
+        "uid" : "ffbcf44792d34f39",
+        "parentUid" : "f67628fb86d266dde41ffc3151bc7c48",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608138125804,
+          "stop" : 1608138136251,
+          "duration" : 10447
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f67628fb86d266dde41ffc3151bc7c48"
+    } ],
+    "uid" : "edddba1744682d007e708c985c18f0a1"
+  } ]
+}
