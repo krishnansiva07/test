@@ -21,19 +21,19 @@ public class LoginTestScripts extends TestBase{
 	
 	static Logger log = Logger.getLogger("devpinoyLogger");
 	@Description("This tescase for testing the login scenario")
-	@Test(priority = 0, enabled = false)
+	@Test(priority = 0, enabled = true)
 	public void validateLogin(Method method) throws IOException {
 		Log.info(method.getName().toString());
 		Log.info("Application Before launching");
 		launchApplication();
 		Log.info("Application Started and checking login is working or nor");
-		performLoginToTheApplication();
+		
 		Log.debug("Checking Assertion is working or not");
 		performAssertTrue(true);
 	
 	}
 	
-	@Test(priority = 1, enabled = true, dataProvider = "credentials")
+	@Test(priority = 1, enabled = false, dataProvider = "credentials")
 	
 	public void testMultipleUserLogins(String userName, String pass) throws IOException {
 		Log.info("Application Before launching");
