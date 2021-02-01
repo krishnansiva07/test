@@ -1,71 +1,32 @@
+---
 resources:
-
-  - name: selenium-setup
-
-    type: git
-
-    icon: github
-
-    source:
-
-      uri: https://github.com/krishnansiva07/test.git
-
+- name: maven-examples
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/krishnansiva07/TestAutomation.git
 jobs:
-
-  - name: 'run'
-
-    public: true
-
-    plan:
-
-      - get: selenium-setup
-
-        trigger: true
-
-      - task: 'install'
-
-        config:
-
-          platform: linux
-
-          image_resource:
-
-            type: docker-image
-
-            source: { repository: markhobson/maven-chrome }
-
-          inputs:
-
-            - name: selenium-setup
-
-          run:
-
-            path: /bin/bash
-
-            args:
-
-              - -c
-
-              - |
-
-                dir
-
-                echo 1
-
-                ls selenium-setup
-
-                cd selenium-setup
-
-                echo hey 2
-
-                ls
-
-                echo hey 3
-
-                mvn install
-
-               
-
-                echo 4
-
-                echo $PWD
+- name: compile-run-unittest
+  plan:
+  - get: maven-examples
+  - task: build
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: maven
+          tag: 3.6.3-jdk-11
+      inputs:
+      - name: maven-examples
+      outputs:
+      - name: build_out
+      params:
+        branch: master
+      run:
+       path: bash
+       args:
+       - -exec
+       - |
+          cd maven-examples/maven-unit-test/
+          mvn clean install
