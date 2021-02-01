@@ -1,6 +1,8 @@
 package testbase;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -11,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -34,12 +37,14 @@ public class TestBase extends SeleniumAbstractMethodImplementation{
 	}
 	
 	//Open browser and Initialice webdriver instance
-	public void openBrowser(String browserName) {
+	public void openBrowser(String browserName) throws MalformedURLException {
 		if(browserName.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			
+			DesiredCapabilities dcap= DesiredCapabilities.chrome();
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\chromedriver.exe");
+			URL url = new URL("http://localhost:55001/wd/hub");
 			if(driver == null) {
-				ChromeOptions option = setChromeBrowserForChrome();
-				driver = new ChromeDriver(option);
+				driver = new RemoteWebDriver(url,dcap);
 				super.setDriver(driver);
 				performImplicitWait();
 			}			
