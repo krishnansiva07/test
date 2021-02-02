@@ -25,11 +25,11 @@ public class LoginTestScripts extends TestBase{
 	public void validateLogin(Method method) throws IOException {
 		Log.info(method.getName().toString());
 		Log.info("Application Before launching");
-		launchApplication();
+		//launchApplication();
 		Log.info("Application Started and checking login is working or nor");
-		
+		System.out.println("From Test Script");
 		Log.debug("Checking Assertion is working or not");
-		performAssertTrue(true);
+		//performAssertTrue(true);
 	
 	}
 	
