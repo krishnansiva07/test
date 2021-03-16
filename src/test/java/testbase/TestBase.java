@@ -133,4 +133,8 @@ public class TestBase extends SeleniumAbstractMethodImplementation{
 		performAssertEquals(expectedUrl, super.getCurrentUrl());
 	}
 	
+	public void diaplay() {
+		System.out.println("Method aded for test");
+	}
+	
 }
